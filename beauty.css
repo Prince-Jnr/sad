@@ -660,6 +660,25 @@ body {
 }
 
 /* ============ RESPONSIVE ============ */
+/* Tablet: 641px - 1024px */
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 280px 1fr;
+    gap: 0;
+  }
+  .paper {
+    padding: 24px 16px 0;
+  }
+  .masthead-title h1 {
+    font-size: clamp(2rem, 5vw, 3.6rem);
+  }
+  .search-wrap {
+    min-width: 180px;
+    max-width: 280px;
+  }
+}
+
+/* Small Tablet: 641px - 860px */
 @media (max-width: 860px) {
   .layout {
     grid-template-columns: 1fr;
@@ -669,24 +688,325 @@ body {
     border-bottom: 1px solid var(--line-strong);
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 18px;
+    padding: 18px 14px 24px;
   }
   .sidebar .panel {
-    flex: 1 1 220px;
+    flex: 1 1 200px;
+    min-width: 200px;
+  }
+  .main {
+    padding: 20px 14px 30px;
+  }
+  .paper {
+    padding: 18px 12px 0;
+  }
+  .masthead-title h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+  .search-wrap {
+    min-width: 160px;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 560px) {
-  .paper { padding: 20px 14px 0; }
-  .masthead-title h1 { font-size: 2.4rem; }
-  .masthead-row { flex-wrap: wrap; gap: 8px; justify-content: center; text-align: center; }
-  .masthead-stats { gap: 12px; }
-  .sidebar { flex-direction: column; padding: 20px 16px 30px; }
-  .main { padding: 20px 16px 30px; }
-  .field-row { grid-template-columns: 1fr; }
-  .task-item { grid-template-columns: auto 1fr; }
-  .task-actions { grid-column: 1 / -1; justify-content: flex-end; margin-top: 6px; }
-  .footer-strip { flex-direction: column; text-align: center; }
+/* Mobile: up to 640px */
+@media (max-width: 640px) {
+  .paper {
+    padding: 16px 10px 0;
+    max-width: 100%;
+  }
+
+  .masthead {
+    padding-bottom: 12px;
+  }
+
+  .masthead-title h1 {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+
+  .masthead-sub {
+    font-size: 0.9rem;
+    margin-top: 6px;
+  }
+
+  .masthead-row {
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.65rem;
+  }
+
+  .edition-toggle {
+    font-size: 0.65rem;
+    padding: 5px 10px;
+  }
+
+  .masthead-stats {
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .mstat-num {
+    font-size: 1.2rem;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--line-strong);
+    flex-direction: column;
+    padding: 16px 10px 20px;
+    gap: 16px;
+  }
+
+  .panel {
+    width: 100%;
+  }
+
+  .panel-heading {
+    font-size: 0.62rem;
+    margin-bottom: 10px;
+  }
+
+  .field-label {
+    font-size: 0.6rem;
+  }
+
+  .field-input,
+  .field-select {
+    font-size: 0.88rem;
+    padding: 8px 9px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .btn-file {
+    font-size: 0.72rem;
+    padding: 10px 12px;
+    margin-top: 2px;
+  }
+
+  .filter-list {
+    gap: 0;
+  }
+
+  .filter-item {
+    padding: 8px 8px;
+    font-size: 0.82rem;
+  }
+
+  .filter-count {
+    font-size: 0.7rem;
+  }
+
+  .seal-wrap {
+    width: 110px;
+    height: 110px;
+  }
+
+  .seal-pct {
+    font-size: 1.3rem;
+  }
+
+  .seal-sub {
+    font-size: 0.56rem;
+  }
+
+  .main {
+    padding: 16px 10px 24px;
+  }
+
+  .main-heading {
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    flex-direction: column;
+  }
+
+  .main-heading h2 {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .search-wrap {
+    width: 100%;
+    min-width: auto;
+    max-width: none;
+  }
+
+  .search-input {
+    font-size: 0.85rem;
+    padding: 8px 8px 8px 26px;
+  }
+
+  .search-icon {
+    font-size: 0.8rem;
+    left: 8px;
+  }
+
+  .task-item {
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    padding: 12px 2px;
+  }
+
+  .task-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+  }
+
+  .task-title {
+    font-size: 0.95rem;
+  }
+
+  .task-meta {
+    gap: 6px;
+    margin-top: 5px;
+    font-size: 0.65rem;
+  }
+
+  .tag-section {
+    padding: 1px 5px;
+    font-size: 0.6rem;
+  }
+
+  .task-actions {
+    display: flex;
+    gap: 3px;
+    grid-column: auto;
+    margin-top: 0;
+  }
+
+  .task-actions button {
+    font-size: 0.85rem;
+    padding: 5px 6px;
+  }
+
+  .task-edit-input {
+    font-size: 0.95rem;
+    padding: 6px 6px;
+  }
+
+  .empty-state {
+    padding: 40px 10px;
+    font-size: 1rem;
+  }
+
+  .footer-strip {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px 2px 20px;
+    gap: 10px;
+  }
+
+  .footer-quote {
+    font-size: 0.82rem;
+    order: 2;
+  }
+
+  .btn-clear {
+    font-size: 0.65rem;
+    padding: 8px 12px;
+  }
+
+  .toast {
+    bottom: 20px;
+    font-size: 0.75rem;
+    padding: 9px 16px;
+  }
+}
+
+/* Extra Small: up to 400px */
+@media (max-width: 400px) {
+  .paper {
+    padding: 12px 8px 0;
+  }
+
+  .masthead-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .masthead-sub {
+    font-size: 0.8rem;
+  }
+
+  .masthead-row {
+    font-size: 0.6rem;
+    gap: 4px;
+  }
+
+  .edition-toggle {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+  }
+
+  .masthead-stats {
+    gap: 8px;
+  }
+
+  .mstat-num {
+    font-size: 1rem;
+  }
+
+  .sidebar {
+    padding: 12px 8px 16px;
+    gap: 12px;
+  }
+
+  .main {
+    padding: 12px 8px 20px;
+  }
+
+  .main-heading h2 {
+    font-size: 1.2rem;
+  }
+
+  .field-input,
+  .field-select {
+    font-size: 0.82rem;
+    padding: 7px 8px;
+  }
+
+  .btn-file {
+    font-size: 0.65rem;
+    padding: 8px 10px;
+  }
+
+  .seal-wrap {
+    width: 100px;
+    height: 100px;
+  }
+
+  .seal-pct {
+    font-size: 1.1rem;
+  }
+
+  .task-item {
+    padding: 10px 0;
+  }
+
+  .task-title {
+    font-size: 0.9rem;
+  }
+
+  .task-meta {
+    font-size: 0.6rem;
+    gap: 4px;
+  }
+
+  .footer-strip {
+    padding: 10px 0 16px;
+  }
 }
 
 /* Respect reduced motion */
