@@ -1,0 +1,13 @@
+{
+  "buildCommand": "echo 'Static site'",
+  "installCommand": "echo 'No dependencies'",
+  "framework": "static",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
